@@ -44,7 +44,11 @@ try_free_btn: Try For Free
 free_trial_btn: Free Trial
 contact_us_btn: Contact Us
 start_free_trial_btn: Start Free Trial Now
-
-
-
+top_logo: /production/static/logo.png
+top_product_img: /production/static/img/photos/photo-2.jpg
+instant_right_img: /production/static/img/illustrations/illustration-8.png
+testimonial_1_img: /production/static/img/photos/photo-1.jpg
+testimonial_2_img: /production/static/img/photos/photo-26.jpg
+toolkit_right_img: /production/static/img/screenshots/desktop/dashkit.png
+top_header_img: /production/static/img/illustrations/illustration-2.png
 ---

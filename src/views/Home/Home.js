@@ -242,7 +242,7 @@ class Home extends Component {
                 {/* {/* Image */}
                 {homePage !=null &&
                  <img
-                    src="/production/static/img/illustrations/illustration-2.png"
+                    src={homePage.top_header_img}
                     className="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0"
                     alt="..."
                     data-aos="fade-up"
@@ -559,8 +559,8 @@ class Home extends Component {
                   {/* Image */}
                   {homePage !=null &&
                   <img
-                      src="production/static/img/photos/photo-2.jpg"
-                      alt="..."
+                      src={homePage.top_product_img}
+                      alt="...."
                       className="card-img-top"
                     />
                   }
@@ -844,7 +844,8 @@ class Home extends Component {
                     {/* Image */}
                     {homePage !=null &&
                      <img
-                        src="production/static/img/screenshots/desktop/dashkit.png"
+                        src={homePage.toolkit_right_img}
+
                         className="screenshot img-fluid img-skewed-item"
                         alt="..."
                       />
@@ -895,13 +896,13 @@ class Home extends Component {
                         <a
                           className="card-img-left bg-cover"
                           style={{
-                            backgroundImage: `url(/production/static/img/photos/photo-1.jpg)`
+                            backgroundImage: `url(${homePage !== null ? homePage.testimonial_1_img : ""})`
                           }}
                           href="javascript:void(0);"
                         >
                           {/* Image (placeholder) */}
                           <img
-                              src="production/static/img/photos/photo-1.jpg"
+                              src={homePage !== null ? homePage.testimonial_1_img : ""}
                               alt="..."
                               className="img-fluid d-md-none invisible"
                             />
@@ -909,13 +910,13 @@ class Home extends Component {
                         <a
                           className="card-img-left bg-cover"
                           style={{
-                            backgroundImage: `url(/production/static/img/photos/photo-26.jpg)`
+                            backgroundImage: `url(${homePage !== null ? homePage.testimonial_2_img : ""})`
                           }}
                           href="javascript:void(0);"
                         >
                           {/* Image (placeholder) */}
                           <img
-                              src="production/static/img/photos/photo-26.jpg"
+                              src={homePage !== null ? homePage.testimonial_2_img : ""}
                               alt="..."
                               className="img-fluid d-md-none invisible"
                             />
@@ -1104,8 +1105,8 @@ class Home extends Component {
               <div className="col-12 col-md-5 col-lg-6 order-md-2">
                 {/* Image */}
                 <img
-                    src="production/static/img/illustrations/illustration-8.png"
-                    alt="..."
+                    src={homePage!=null ? homePage.instant_right_img : ""}
+                    alt="...."
                     className="img-fluid mb-6 mb-md-0"
                   />
               </div>
