@@ -206,7 +206,7 @@ class Header extends Component {
                   </li>
 
                   <li className="nav-item  d-lg-none">
-                    <a className="nav-link"  href="javascript:void(0)" >
+                    <a className="nav-link" onClick={this.login.bind(this)}  href="javascript:void(0)" >
                     Sign In
                     </a>
                   </li>

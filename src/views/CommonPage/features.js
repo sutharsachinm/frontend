@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import Auth from '../../Auth/Auth.js';
  
 
 const encode = (data) => {
@@ -43,6 +44,10 @@ class Home extends Component {
      }
    };
   
+   login() {
+    const {login} = this.props.auth;
+    login();
+  }
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
      
@@ -214,7 +219,7 @@ class Home extends Component {
              {pricing !=null &&
                     pricing.already_using_profit
                   } 
-             </span> <a href="https://app.profitpro.io/" className="text-primary">{pricing !=null &&
+             </span> <a href="javascript:void(0);" onClick={this.login.bind(this)} className="text-primary">{pricing !=null &&
                     pricing.sign_in
                   }</a>
 

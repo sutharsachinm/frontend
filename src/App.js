@@ -198,7 +198,7 @@ class App extends Component {
 						}}/>
             <Route render={() => <NoMatch auth={auth} siteUrl={siteUrl} />} />
           </Switch>
-          <Footer />
+          <Footer auth={auth} />
         </div>
       </Router>
       </Provider>
