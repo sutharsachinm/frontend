@@ -91,6 +91,12 @@
       "demo_desc": "We can help you solve company communication.",
       "request_a_demo_btn": "Request a demo",
       "get_started_btn": "Get started",
+      "top_header_img": "/production/static/img/illustrations/illustration-2.png",
+      "illustrations_1": "/production/static/img/illustrations/illustration-4.png",
+      "illustrations_2": "/production/static/img/illustrations/illustration-1-cropped.png",
+      "illustrations_3": "/production/static/img/illustrations/illustration-7.png",
+      "illustrations_4": "/production/static/img/illustrations/illustration-6.png",
+      "illustrations_5": "/production/static/img/illustrations/illustration-1.png",
       "name": "features",
       "body": ""
     },
@@ -186,15 +192,17 @@
       "package_type_3": "PREMIUM",
       "try_for_free_btn": "Try for free",
       "contact_us_btn": "Contact us",
+      "testimonial_1_img": "/production/static/img/photos/photo-1.jpg",
+      "testimonial_2_img": "/production/static/img/photos/photo-26.jpg",
       "name": "pricing",
       "body": ""
     },
     {
-      "content": "\r\n",
+      "content": "",
       "isEmpty": false,
       "excerpt": "",
       "name": "privacy",
-      "update_date": "Updated 30/08/2018",
+      "update_date": "Updated 30/08/2019",
       "p_tag_1": "Profit Pro takes your privacy seriously. We will not sell, lease, or exchange your personal data to, or otherwise share your personal data with, third parties in ways other than described in this Privacy Policy.'",
       "p_tag_2": "By using Profit Pro including services available at the ProfitPro.com domains, you are using a service provided by Profit Pro. (the “Service”) and you agree to be bound by the Terms of Service and this Privacy Policy. Some capitalized terms used in this Privacy Policy and not otherwise defined may be defined in the Terms of Service. This Privacy Policy only addresses activities from our servers.",
       "p_title_1": "Consent and Information Collection and Use",
@@ -234,13 +242,28 @@
       "suggestions": "If you have any questions or suggestions regarding our Privacy Policy.",
       "email_us": "EMAIL US",
       "email": "tech@profitpro.io",
-      "body": "\r\n"
+      "body": ""
     },
     {
-      "content": "\r\n",
+      "content": "",
       "isEmpty": false,
       "excerpt": "",
-      "title": "Terms of Servicesssss",
+      "header_title": "Refund Policies",
+      "header_desc": "Our policy lasts 7 days. If 7 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.",
+      "p_title_1": "Refunds (if applicable)",
+      "p_tag_1": "Once your refund request is submitted, we will send you an email to notify you that we have received your request. We will also notify you of the approval or rejection of your refund. If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.",
+      "p_title_2": "Late or missing refunds (if applicable)",
+      "p_tag_2": "If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, it may take some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund is posted. If you’ve done all of this and you still have not received your refund yet, please contact us at profitpro.io/support.",
+      "p_title_3": "Sale items (if applicable)",
+      "p_tag_3": "Only regular priced items may be refunded, unfortunately sale items cannot be refunded.",
+      "name": "refund",
+      "body": ""
+    },
+    {
+      "content": "",
+      "isEmpty": false,
+      "excerpt": "",
+      "title": "Terms of Service",
       "update_date": "Updated 30/08/2019",
       "label_1": "OVERVIEW",
       "p_tag_1": "This website is operated by Profit Pro. Throughout the site, the terms “we”, “us” and “our” refer to Profit Pro. Profit Pro offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.",
@@ -319,7 +342,7 @@
       "email_us": "EMAIL US",
       "email": "tech@profitpro.io",
       "name": "terms",
-      "body": "\r\n"
+      "body": ""
     },
     {
       "content": "",
@@ -339,6 +362,14 @@
       "interest_title": "Interest in becoming an affiliate?",
       "header_title": "TRY IT FOR YOURSELF",
       "btn_email": "Email",
+      "top_photos_1": "/production/static/img/photos/photo-16.jpg",
+      "top_photos_2": "/production/static/img/photos/photo-17.jpg",
+      "top_photos_3": "/production/static/img/photos/photo-18.jpg",
+      "top_photos_4": "/production/static/img/photos/photo-19.jpg",
+      "top_photos_5": "/production/static/img/photos/photo-20.jpg",
+      "top_photos_6": "/production/static/img/photos/photo-21.jpg",
+      "slider1": "/production/static/img/covers/cover-11.jpg",
+      "slider2": "/production/static/img/covers/cover-3.jpg",
       "name": "testimonials",
       "body": ""
     }

@@ -14,12 +14,10 @@ class Home extends Component {
             refundData:null,
         };
     }
-     async componentDidMount(){
+    async componentDidMount(){
       console.log('this.props : ',this.props)
       this.setState({refundData:this.props.fields});
-      
-
-  }
+   }
 
     render() {
 

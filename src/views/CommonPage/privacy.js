@@ -15,13 +15,9 @@ class Home extends Component {
         };
     }
      
-      async componentDidMount(){
+    async componentDidMount(){
           console.log('this.props : ',this.props)
-      this.setState({privacyData:this.props.fields}); 
-        
-             
-        
-
+         this.setState({privacyData:this.props.fields}); 
     }
 
     render() {

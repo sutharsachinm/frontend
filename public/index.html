@@ -22,26 +22,37 @@
   <link href='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="%PUBLIC_URL%/production/static/css/theme.min.css">
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1165136683669010');
-    fbq('track', 'PageView');
+
+  <script type="text/javascript">
+    var auth0 = new auth0.WebAuth({
+      clientID: 'CWuOoIu59fC3AzJmk1VwZfaA8JgTB0ve',
+      domain: 'profitpro.auth0.com'
+    });
+    auth0.crossOriginVerification();
+    auth0.popup.callback();
   </script>
-   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1165136683669010&ev=PageView&noscript=1" /></noscript>
+   <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1165136683669010');
+  fbq('track', 'PageView');
+ </script>
+ <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1165136683669010&ev=PageView&noscript=1"
+ /></noscript>
+ <!-- End Facebook Pixel Code -->
  
-  <script id="ze-snippet"
-    src="https://static.zdassets.com/ekr/snippet.js?key=0ed22e50-6b5c-42c2-9b93-5f8de155b1ae"> </script>  
+<!-- Start of profitpro Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=0ed22e50-6b5c-42c2-9b93-5f8de155b1ae"> </script>
+<!-- End of profitpro Zendesk Widget script -->
+
  
 
 

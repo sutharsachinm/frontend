@@ -185,7 +185,7 @@ class App extends Component {
               props={this.props}
               auth={auth}
               component={Refund}
-              fields={this.getDocument('pages', 'Refund')}
+              fields={this.getDocument('pages', 'refund')}
               siteTitle={siteTitle}
             />
 
