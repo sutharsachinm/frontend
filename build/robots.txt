@@ -1,1 +1,1 @@
-Sitemap: https://netlify-cms-react-starter.netlify.com/sitemap.xml
+Sitemap: https://profitpro.io/sitemap.xml

@@ -95,7 +95,7 @@ class App extends Component {
             titleTemplate={`${siteTitle} | %s`}
           />
        
-          <Header props={this.props} auth={auth} />
+          <Header props={this.props} fields={this.getDocument('pages', 'header')}  auth={auth} />
 
           <Switch>
             <RouteWithMeta
@@ -185,7 +185,7 @@ class App extends Component {
               props={this.props}
               auth={auth}
               component={Refund}
-              fields={this.getDocument('pages', 'Refund')}
+              fields={this.getDocument('pages', 'refund')}
               siteTitle={siteTitle}
             />
 
@@ -198,7 +198,7 @@ class App extends Component {
 						}}/>
             <Route render={() => <NoMatch auth={auth} siteUrl={siteUrl} />} />
           </Switch>
-          <Footer />
+          <Footer props={this.props} fields={this.getDocument('pages', 'header')} />
         </div>
       </Router>
       </Provider>

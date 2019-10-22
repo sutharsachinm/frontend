@@ -12,6 +12,8 @@ import FreeTrail from '../src/views/CommonPage/freeTrail'
 import Faq from '../src/views/CommonPage/faq'
 import Privacy from '../src/views/CommonPage/privacy'
 import Refund from '../src/views/CommonPage/refund'
+import Footer from '../src/views/components/Footer'
+import Header from '../src/views/components/Header'
 
 
 import NoMatch from './components/404page'
@@ -62,6 +64,12 @@ CMS.registerPreviewTemplate('privacy-page', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('refund-page', ({ entry }) => (
   <Refund fields={entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('footer-page', ({ entry }) => (
+  <Footer fields={entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('header-page', ({ entry }) => (
+  <Header fields={entry.toJS().data} />
 ))
 
 // Return to home when user logging out

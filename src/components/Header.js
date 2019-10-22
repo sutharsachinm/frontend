@@ -21,6 +21,7 @@ class Header extends Component {
 
         this.state = {
             registerType:0,
+            headerPage:null,
             emailAddress2:""
         };
     }
@@ -88,7 +89,8 @@ class Header extends Component {
  }
 
     componentWillMount(){
-  
+      console.log('headerPage : ',this.props.fields)
+       this.setState({headerPage:this.props.fields})
 
       if(this.getHeader()===false)
       {
@@ -156,8 +158,8 @@ class Header extends Component {
     render() {
 
       const {registerType} = this.props;
-      const {emailAddress2} = this.state;
-
+      const {emailAddress2,headerPage} = this.state;
+      if(headerPage!=null ){
         return (
             
           <div id="myHeader"  className="navbar navbar-expand-lg navbar-light bg-white header-space"> 
@@ -168,9 +170,9 @@ class Header extends Component {
                 <section className="container">
 
               <a className="navbar-brand" href="/">
-                <img src="/production/static/img/logo.png" className="navbar-brand-img" alt="..." />
+                <img src={headerPage.logo_img} className="navbar-brand-img" alt="..." />
                 <span className="navbar-title">
-                    Pro 
+                    {headerPage.logo_name} 
                 </span>
               </a>
                
@@ -187,27 +189,27 @@ class Header extends Component {
  
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link "  href="/features" > Why Profit Pro </a>
+                    <a className="nav-link "  href="/features" > {headerPage.p_title_1}  </a>
                   </li>
                   <li className="nav-item ">
                     <a className="nav-link "  href="/pricing" >
-                      Pricing
+                      {headerPage.p_title_2}
                     </a>
                  </li>
                   <li className="nav-item ">
                     <a className="nav-link "   href="/testimonials">
-                      Testimonials
+                      {headerPage.p_title_3}
                     </a>
                   </li>
                   <li className="nav-item ">
                     <a className="nav-link"  href="https://support.profitpro.io/hc/en-us" >
-                    Support
+                    {headerPage.p_title_4}
                     </a>
                   </li>
 
                   <li className="nav-item  d-lg-none">
                     <a className="nav-link"  href="javascript:void(0)" >
-                    Sign In
+                    {headerPage.p_title_5}
                     </a>
                   </li>
                 </ul>
@@ -302,6 +304,14 @@ class Header extends Component {
         
 
         );
+      }
+      else
+      {
+        return(
+         <div>
+         </div>
+        );
+      }
     }
 }
 

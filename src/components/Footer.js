@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import $ from 'jquery';
 class Footer extends Component {
 
     constructor(props) {
@@ -8,6 +8,7 @@ class Footer extends Component {
 
         this.state = {
           show:true,
+          footerPage:null
         };
     }
 
@@ -23,9 +24,13 @@ class Footer extends Component {
       return false;
     
     };
-
+      openContact()
+   {
+     $('#launcher').contents().find('.wrapper-AtBcr').click();
+   }
     componentWillMount(){
-  
+      console.log('footerPage : ',this.props.fields)
+       this.setState({footerPage:this.props.fields})
       console.log(this.props.registerType)
       if(this.props.registerType=="" || this.props.registerType==undefined)
       {
@@ -39,6 +44,8 @@ class Footer extends Component {
     }
 
     render() {
+      const {footerPage} = this.state;
+      if(footerPage!=null ){
         return (
             <div id="myFooter">
                {this.state.show===true &&
@@ -50,18 +57,18 @@ class Footer extends Component {
                 <div className="col-12 col-md-4 col-lg-3">
               
                  
-                  <img src="/production/static/img/logo.png" alt="..." className="footer-brand img-fluid mb-2" />
+                  <img src={footerPage.logo_img} alt="..." className="footer-brand img-fluid mb-2" />
       
                   
                   <p className="text-gray-700 mb-2">
-                    A better way to build.
+                   {footerPage.footer_one_liner}
                   </p>
       
                   
                   <ul className="list-unstyled list-inline list-social mb-6 mb-md-0">
                   <li className="list-inline-item list-social-item mr-3">
                       <a href="javascript:void(0);" className="text-decoration-none">
-                        <img src="/production/static/img/icons/social/facebook.svg" className="list-social-icon" alt="..."/>
+                        <img src={footerPage.facebook} className="list-social-icon" alt="..."/>
                       </a>
                     </li>
                     {/* <li className="list-inline-item list-social-item mr-3">
@@ -94,22 +101,22 @@ class Footer extends Component {
                   <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                     <li className="mb-3">
                       <a href="/features" className="text-reset">
-                      Why Profit Pro
+                      {footerPage.p_title_1}
                       </a>
                     </li>
                     <li className="mb-3">
                       <a href="/pricing" className="text-reset">
-                       Pricing
+                       {footerPage.p_title_2}
                       </a>
                     </li>
                     <li className="mb-3">
                       <a href="/refund" className="text-reset">
-                      Refund
+                      {footerPage.p_title_6}
                       </a>
                     </li>
                     <li className="mb-3">
                       <a href="javascript:void(0);" onClick={()=>this.props.auth.login()} className="text-reset">
-                      Login
+                      {footerPage.p_title_7}
                       </a>
                     </li>
                      
@@ -128,27 +135,27 @@ class Footer extends Component {
               <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 <li className="mb-3">
                   <a href="/testimonials" className="text-reset">
-                  Testimonials
+                  {footerPage.p_title_3}
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="/faq" className="text-reset">
-                  FAQ
+                  {footerPage.p_title_8}
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="/privacy" className="text-reset">
-                  Privacy
+                  {footerPage.p_title_9}
                   </a>
                 </li>
                 <li className="mb-3">
                   <a href="/terms-of-service" className="text-reset">
-                  Terms of Service
+                  {footerPage.p_title_10}
                   </a>
                 </li>
                 <li>
                   <a href="/support" className="text-reset">
-                  Support
+                  {footerPage.p_title_4}
                   </a>
                 </li>
               </ul>
@@ -157,7 +164,7 @@ class Footer extends Component {
                 <ul className="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
                 
                 <li className="mb-3">
-                  <a href="/" className="text-reset">
+                  <a h href="javascript:void(0);"  onClick={this.openContact.bind(this)} className="text-reset">
                   Chat With Us
                   </a>
                 </li>
@@ -174,6 +181,14 @@ class Footer extends Component {
               }
              </div>
         );
+        }
+      else
+      {
+        return(
+         <div>
+         </div>
+        );
+      }
     }
 }
 
