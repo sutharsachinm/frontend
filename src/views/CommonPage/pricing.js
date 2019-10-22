@@ -93,7 +93,8 @@ class Home extends Component {
       this.props.ChangePlan(plan);
       this.props.changeRegisterType(1);
       this.props.changeRole("");
-      history.replace('/product-tours/signup?email=');
+      // history.replace('/product-tours/signup?email=');
+      window.location.href='/product-tours/example@gmail.com/'+plan;
     }
 
     render() {

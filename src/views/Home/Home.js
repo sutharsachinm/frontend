@@ -92,7 +92,8 @@ class Home extends Component {
               this.props.changeRole(email);
               this.props.changeRegisterType(1);
               this.props.ChangePlan(plan);
-               history.replace('/product-tours/signup?email='+email);
+              window.location.href='/product-tours/'+email+'/'+plan;
+              //  history.replace('/product-tours/signup?email='+email);
 
             })
             .catch(error =>{
@@ -146,9 +147,6 @@ class Home extends Component {
           if(this.validateEmail(email)  && name!="")
           {
 
-            toast.success("Thank you for contacting us. We will get back to you soon", {
-              position: toast.POSITION.TOP_RIGHT
-            });
             
 
             $.ajax({
@@ -159,6 +157,10 @@ class Home extends Component {
             })
              .then((res) =>{
                  
+                toast.success("Thank you for contacting us. We will get back to you soon", {
+                  position: toast.POSITION.TOP_RIGHT
+                });
+              
                   setTimeout(()=>{
                       window.location.href="/";
                   },3000)
@@ -186,7 +188,8 @@ class Home extends Component {
     this.props.ChangePlan(plan);
     this.props.changeRegisterType(1);
     this.props.changeRole("");
-    history.replace('/product-tours/signup?email=');
+    // history.replace('/product-tours/signup?email=');
+    window.location.href='/product-tours/example@gmail.com/'+plan;
    }
    renderPrice(plan){
 
@@ -209,26 +212,15 @@ class Home extends Component {
           })
    }
 
-   openContact()
-   {
-     $('#launcher').contents().find('.wrapper-AtBcr').click();
-   }
+   openContact() { $('#launcher').contents().find('.wrapper-AtBcr').click(); }
+   
    async componentDidMount(){
-      
- 
        this.setState({homePage:this.props.fields})
-
-    }
+   }
     
    render() {
     const {plan,fcompany,femail,fphone,fname,emailAddress,homePage} = this.state;
-
      console.log('homePage : ',homePage) 
-          
-     
-      
-
-       
      return (
       <div className=" ">
 

@@ -1,12 +1,12 @@
 # See https://github.com/netlify/netlify-cms/blob/master/example/config.yml
 backend:
-  name: github
+  name: git-gateway
   repo: sutharsachinm/frontend
   
   
   # name: test-repo
 
-site_url: https://profit.netlify.com/
+site_url: https://quizzical-jennings-4c33d5.netlify.com
 
 
 publish_mode: editorial_workflow

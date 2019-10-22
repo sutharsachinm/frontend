@@ -198,7 +198,9 @@ class App extends Component {
 						}}/>
             <Route render={() => <NoMatch auth={auth} siteUrl={siteUrl} />} />
           </Switch>
-          <Footer props={this.props} fields={this.getDocument('pages', 'header')} />
+
+          <Footer auth={auth} props={this.props} fields={this.getDocument('pages', 'header')} />
+
         </div>
       </Router>
       </Provider>
