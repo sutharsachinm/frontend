@@ -411,9 +411,9 @@ collections: # A list of collections the CMS should be able to edit
                     - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
                     - {label: Noindex, name: noindex, widget: boolean, required: false}  
       - file: "content/pages/productTours.md"
-              label: "product Tours Page"
-              name: "productTours-page"
-              fields:
+        label: "product Tours Page"
+        name: "productTours-page"
+        fields:
                       - {label: create account Header Title, name: ac_header_title, widget: string}
                       - {label: create account Header Desc, name: ac_header_desc, widget: string}
                       - {label: create Plan Title, name: ac_plan_title, widget: string}
@@ -426,8 +426,6 @@ collections: # A list of collections the CMS should be able to edit
                       - {label: Credit Card, name: credit_card, widget: string}
                       - {label: Trial Day, name: trial_day, widget: string}
                       - {label: Free Trial, name: free_trial, widget: string}
-                      
-                      
                       - label: "Meta"
                         required: false
                         name: "meta"
