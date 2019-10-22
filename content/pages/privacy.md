@@ -1,5 +1,5 @@
 ---
-name: Privacysss
+name: Privacyssssss
 update_date: Updated 30/08/2019
 p_tag_1: >-
   Profit Pro takes your privacy seriously. We will not sell, lease, or exchange
