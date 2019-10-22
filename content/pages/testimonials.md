@@ -13,4 +13,13 @@ interest_desc : "Hit us up and we'll get in touch with you."
 interest_title : 'Interest in becoming an affiliate?'
 header_title : 'TRY IT FOR YOURSELF'
 btn_email : 'Email'
+top_photos_1: /production/static/img/photos/photo-16.jpg
+top_photos_2: /production/static/img/photos/photo-17.jpg
+top_photos_3: /production/static/img/photos/photo-18.jpg
+top_photos_4: /production/static/img/photos/photo-19.jpg
+top_photos_5: /production/static/img/photos/photo-20.jpg
+top_photos_6: /production/static/img/photos/photo-21.jpg
+slider1: /production/static/img/covers/cover-11.jpg
+slider2: /production/static/img/covers/cover-3.jpg
+
 ---

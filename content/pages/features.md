@@ -72,4 +72,10 @@ demo_title : Schedule a demo with us
 demo_desc : We can help you solve company communication.
 request_a_demo_btn : Request a demo
 get_started_btn : Get started
+top_header_img: /production/static/img/illustrations/illustration-2.png
+illustrations_1: /production/static/img/illustrations/illustration-4.png
+illustrations_2: /production/static/img/illustrations/illustration-1-cropped.png
+illustrations_3: /production/static/img/illustrations/illustration-7.png
+illustrations_4: /production/static/img/illustrations/illustration-6.png
+illustrations_5: /production/static/img/illustrations/illustration-1.png
 ---

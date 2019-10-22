@@ -29,5 +29,7 @@ package_type_2: 68% OF BUSINESSES CHOOSE PRO
 package_type_3: PREMIUM
 try_for_free_btn: Try for free
 contact_us_btn: Contact us
+testimonial_1_img: /production/static/img/photos/photo-1.jpg
+testimonial_2_img: /production/static/img/photos/photo-26.jpg
 
 ---

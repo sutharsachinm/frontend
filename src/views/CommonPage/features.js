@@ -174,7 +174,9 @@ class Home extends Component {
           <div className="col-12 col-md-5 col-lg-6 order-md-2">
             
             {/* {/* Image */} 
-            <img src="production/static/img/illustrations/illustration-2.png" className="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100" />
+            <img src={pricing !=null ?
+                    pricing.top_header_img : ""
+                  } className="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100" />
 
           </div>
           <div className="col-12 col-md-7 col-lg-6 order-md-1" data-aos="fade-up">
@@ -268,7 +270,9 @@ class Home extends Component {
             <div className="row align-items-center mb-8"data-aos="fade-up">
               <div className="col-4 col-lg-5">
                 
-                <img src="/production/static/img/illustrations/illustration-4.png" alt="..." className="img-fluid"/>
+                <img src={pricing !=null ?
+                    pricing.illustrations_1 : ""
+                  } alt="..." className="img-fluid"/>
 
               </div>
               <div className="col-8 col-lg-7">
@@ -292,7 +296,9 @@ class Home extends Component {
             <div className="row align-items-center mb-8" data-aos="fade-up">
               <div className="col-4 col-lg-5">
                 
-                <img src="/production/static/img/illustrations/illustration-1-cropped.png" alt="..." className="img-fluid"/>
+                <img src={pricing !=null ?
+                    pricing.illustrations_2 : ""
+                  } alt="..." className="img-fluid"/>
 
               </div>
               <div className="col-8 col-lg-7">
@@ -318,7 +324,9 @@ class Home extends Component {
             <div className="row align-items-center mb-8" data-aos="fade-up">
               <div className="col-4 col-lg-5">
                 
-                <img src="/production/static/img/illustrations/illustration-7.png" alt="..." className="img-fluid"/>
+                <img src={pricing !=null ?
+                    pricing.illustrations_3 : ""
+                  } alt="..." className="img-fluid"/>
 
               </div>
               <div className="col-8 col-lg-7">
@@ -341,7 +349,9 @@ class Home extends Component {
             <div className="row align-items-center mb-8" data-aos="fade-up">
               <div className="col-4 col-lg-5">
                 
-                <img src="/production/static/img/illustrations/illustration-6.png" alt="..." className="img-fluid"/>
+                <img src={pricing !=null ?
+                    pricing.illustrations_4 : ""
+                  } alt="..." className="img-fluid"/>
 
               </div>
               <div className="col-8 col-lg-7">
@@ -906,7 +916,7 @@ class Home extends Component {
                   <div className="col-12 col-xl-11">
                 
                     <div className="text-center">
-                      <img src="/production/static/img/illustrations/illustration-1.png" alt="..." className="img-fluid mb-3" style={{width: "200px"}}/>
+                      <img src={pricing !=null ? pricing.illustrations_5 : ""} alt="..." className="img-fluid mb-3" style={{width: "200px"}}/>
                     </div>
 
                     <h2 className="font-weight-bold text-center mb-1">

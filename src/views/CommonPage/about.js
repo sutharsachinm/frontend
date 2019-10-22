@@ -61,16 +61,16 @@ class Home extends Component {
             
             <div className="form-row">
               <div className="col-4">
-                <img src="production/static/img/photos/photo-16.jpg" className="img-fluid rounded shadow-lg" alt="..."/>
+                <img src={page !=null ? page.top_photos_1 : ""}  className="img-fluid rounded shadow-lg" alt="..."/>
 
                
 
               </div>
               <div className="col-3">
 
-                <img src="production/static/img/photos/photo-17.jpg" className="img-fluid rounded shadow-lg mb-4" alt="..."/>
+                <img src={page !=null ? page.top_photos_2 : ""} className="img-fluid rounded shadow-lg mb-4" alt="..."/>
 
-                <img src="production/static/img/photos/photo-18.jpg" className="img-fluid rounded shadow-lg mt-1" alt="..."/>
+                <img src={page !=null ? page.top_photos_3 : ""} className="img-fluid rounded shadow-lg mt-1" alt="..."/>
 
               </div>
               <div className="col-5">
@@ -78,17 +78,17 @@ class Home extends Component {
                 <div className="form-row mb-4">
                   <div className="col-5">
                     
-                    <img src="production/static/img/photos/photo-19.jpg" className="img-fluid rounded shadow-lg" alt="..."/>
+                    <img src={page !=null ? page.top_photos_4 : ""} className="img-fluid rounded shadow-lg" alt="..."/>
 
                   </div>
                   <div className="col-7">
                     
-                    <img src="production/static/img/photos/photo-20.jpg" className="img-fluid rounded shadow-lg" alt="..."/>
+                    <img src={page !=null ? page.top_photos_5 : ""} className="img-fluid rounded shadow-lg" alt="..."/>
 
                   </div>
                 </div> 
 
-                <img src="production/static/img/photos/photo-21.jpg" className="img-fluid rounded shadow-lg mt-1" alt="..."/>
+                <img src={page !=null ? page.top_photos_6 : ""} className="img-fluid rounded shadow-lg mt-1" alt="..."/>
 
               </div>
             </div>
@@ -209,7 +209,7 @@ class Home extends Component {
         <div className="w-100">
           
           
-          <img src="production/static/img/covers/cover-11.jpg" className="img-fluid w-100" />
+          <img src={page !=null ? page.slider1 : "" }  className="img-fluid w-100" />
 
           <div className="shape shape-top shape-fluid-x svg-shim text-white">
             <svg viewBox="0 0 2880 72" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,7 +221,7 @@ class Home extends Component {
         <div className="w-100">
           
           
-          <img src="production/static/img/covers/cover-3.jpg" className="img-fluid w-100" />
+          <img src={page !=null ? page.slider2 : "" } className="img-fluid w-100" />
 
           <div className="shape shape-top shape-fluid-x svg-shim text-white">
             <svg viewBox="0 0 2880 72" fill="none" xmlns="http://www.w3.org/2000/svg">

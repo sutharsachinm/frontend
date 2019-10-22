@@ -11,13 +11,22 @@ class Home extends Component {
 
         this.state = {
             name:"Pricing",
+            refundData:null,
         };
     }
-     
+     async componentDidMount(){
+      console.log('this.props : ',this.props)
+      this.setState({refundData:this.props.fields});
+      
+
+  }
 
     render() {
 
         
+    const{refundData} = this.state;
+    if(refundData!=null){
+
 
         return (
             
@@ -30,7 +39,7 @@ class Home extends Component {
           <div className="col-12 col-md-8 text-center">
             
             <h1 className=" font-weight-bold text-white mb-6 mt-n3">
-              Refund Policies
+              {refundData.header_title}
             </h1>
 
             
@@ -64,7 +73,7 @@ class Home extends Component {
         <div className="row">
 
            <p className="text-gray-800" id="payItDown">
-                Our policy lasts 7 days. If 7 days have gone by since your purchase, unfortunately we can’t offer you a refund or exchange.
+           {refundData.header_desc}
            </p>
 
           <div className="col-12">
@@ -77,25 +86,22 @@ class Home extends Component {
           <div className="col-12 col-md-11">
 
 
-           <h3 className="mb-5"> Refunds (if applicable) </h3>
+           <h3 className="mb-5"> {refundData.p_title_1} </h3>
 
            <p className="text-gray-800" >
-              Once your refund request is submitted, we will send you an email to notify you that we have received your request. We will also notify you of the approval or rejection of your refund.
-              If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.
+              {refundData.p_tag_1}
            </p>
 
-          <h3 className="mb-5">Late or missing refunds (if applicable)</h3>
+          <h3 className="mb-5">{refundData.p_title_2}</h3>
 
           <p className="text-gray-800" >
-            If you haven’t received a refund yet, first check your bank account again.
-            Then contact your credit card company, it may take some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund is posted.
-            If you’ve done all of this and you still have not received your refund yet, please contact us at profitpro.io/support.
+          {refundData.p_tag_2}
           </p>
 
-          <h3 className="mb-5">Sale items (if applicable)</h3>
+          <h3 className="mb-5">{refundData.p_title_3}</h3>
 
           <p className="text-gray-800" >
-          Only regular priced items may be refunded, unfortunately sale items cannot be refunded.
+          {refundData.p_tag_3}
           </p>
 
           </div>
@@ -116,6 +122,13 @@ class Home extends Component {
       
 
         );
+      }
+      else{
+        return(
+          <div>
+          </div>
+          );
+      }
     }
 }
 

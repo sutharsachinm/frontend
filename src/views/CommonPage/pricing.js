@@ -407,16 +407,16 @@ class Home extends Component {
 
                       {/* Slider */}
                       <div className="card-img-slider" data-flickity='{"fade": true, "imagesLoaded": true, "pageDots": false, "prevNextButtons": false, "asNavFor": "#blogSlider", "draggable": false}'>
-                        <a className="card-img-left bg-cover" style={{backgroundImage: `url(/production/static/img/photos/photo-1.jpg)`}} href="javascript:void(0);">
+                        <a className="card-img-left bg-cover" style={{backgroundImage: `url(${packagePrice !== null ? packagePrice.testimonial_1_img : ""})`}} href="javascript:void(0);">
 
                       {/* Image (placeholder) */}
-                      <img src="production/static/img/photos/photo-1.jpg" alt="..." className="img-fluid d-md-none invisible" />
+                      <img src={packagePrice!=null ? packagePrice.testimonial_1_img : ""} alt="..." className="img-fluid d-md-none invisible" />
 
                     </a>
-                    <a className="card-img-left bg-cover" style={{backgroundImage: `url(/production/static/img/photos/photo-26.jpg)`}} href="javascript:void(0);">
+                    <a className="card-img-left bg-cover" style={{backgroundImage: `url(${packagePrice !== null ? packagePrice.testimonial_2_img : ""})`}} href="javascript:void(0);">
 
                       {/* Image (placeholder) */}
-                      <img src="production/static/img/photos/photo-26.jpg" alt="..." className="img-fluid d-md-none invisible" />
+                      <img src={packagePrice!=null ? packagePrice.testimonial_2_img : ""} alt="..." className="img-fluid d-md-none invisible" />
                       
                     </a>
                       </div>

@@ -1,5 +1,5 @@
 const callbackLocal = 'http://localhost:3000/callback';
-const callbackLive = 'https://profitpro.io/callback';
+const callbackLive = 'https://profit.netlify.com/callback';
 export const AUTH_CONFIG = {
   domain: 'profitpro.auth0.com',
   clientId: 'CWuOoIu59fC3AzJmk1VwZfaA8JgTB0ve',
