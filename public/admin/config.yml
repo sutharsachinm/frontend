@@ -1,0 +1,399 @@
+# See https://github.com/netlify/netlify-cms/blob/master/example/config.yml
+backend:
+  name: github
+  repo: bahaji/profitpro-frontend
+  
+  
+  # name: test-repo
+
+site_url: http://localhost:3000
+
+publish_mode: editorial_workflow
+# display_url: https://netlify-cms-react-starter.netlify.com # This url will display in the top-right of the CMS
+media_folder: "public/production/static/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/production/static/img" # The src attribute for uploaded media will begin with /images/uploads
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "pages"
+    label: "Page"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
+    files:
+      - file: "content/pages/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: Header Title, name: header_title, widget: string}
+          - {label: Price 2 Title, name: price_2_title, widget: string}
+          - {label: What Included Title, name: what_included_title, widget: string}
+          - {label: Contact Price Title, name: contact_price_title, widget: string}
+          - {label: Get Started, name: get_started, widget: string}
+          - {label: Header Title Desc, name: header_title_desc, widget: string}
+          
+          - {label: Check Desc 1, name: check_1, widget: string}
+          - {label: Check Desc 2, name: check_2, widget: string}
+          - {label: Check Desc 3, name: check_3, widget: string}
+          - {label: Products Title 1, name: products_title_1, widget: string}
+          - {label: Products Title 2, name: products_title_2, widget: string}
+          - {label: Products Title 3, name: products_title_3, widget: string}
+          - {label: Products Desc 1, name: products_desc_1, widget: string}
+          - {label: Products Desc 2, name: products_desc_2, widget: string}
+          - {label: Products Desc 3, name: products_desc_3, widget: string}
+          - {label: About Title, name: about_heading, widget: string}
+          - {label: About Desc, name: about_desc, widget: string}
+          - {label: About Title 1, name: about_heading_1, widget: string}
+          - {label: About Title 2, name: about_heading_2, widget: string}
+          - {label: About Desc 2, name: about_desc_2, widget: string}
+          - {label: About Title 1 1, name: about_heading_1_1, widget: string}
+          - {label: About Desc 1 1, name: about_desc_1_1, widget: string}
+          - {label: About Title 1 2, name: about_heading_1_2, widget: string}
+          - {label: About Desc 1 2, name: about_desc_1_2, widget: string}
+          - {label: About Title 1 3, name: about_heading_1_3, widget: string}
+          - {label: About Desc 1 3, name: about_desc_1_3, widget: string}
+          - {label: Testimonials Title, name: testimonials_heading, widget: string}
+          - {label: Testimonials Desc, name: testimonials_desc, widget: string}
+          - {label: stats Title, name: stats_heading, widget: string}
+          - {label: Pricing Title 1 1, name: pricing_heading_1_1, widget: string}
+          - {label: Pricing Desc 1 1, name: pricing_desc_1_1, widget: string}
+          - {label: Pricing Title 1 2, name: pricing_heading_1_2, widget: string}
+          - {label: Pricing Desc 1 2, name: pricing_desc_1_2, widget: string}
+          - {label: Footer Badge, name: footer_badge, widget: string}
+          - {label: Footer Title, name: footer_heading, widget: string}
+          - {label: Footer Desc, name: footer_desc, widget: string}
+          - {label: Testimonial Desc 1, name: testimonial_desc_1, widget: string}
+          - {label: Testimonial Desc Name 1, name: testimonial_desc_name_1, widget: string}
+          - {label: Testimonial Desc 2, name: testimonial_desc_2, widget: string}
+          - {label: Testimonial Desc Name 2, name: testimonial_desc_name_2, widget: string}
+          - {label: Top Logo, name: top_logo, widget: image}
+          - {label: Top Product Image, name: top_product_img, widget: image}
+          - {label: Instant Right Image, name: instant_right_img, widget: image}
+          - {label: Top Header Image, name: top_header_img, widget: image}
+          - {label: Testimonial 1 Image, name: testimonial_1_img, widget: image}
+          - {label: Testimonial 2 Image, name: testimonial_2_img, widget: image}
+          - {label: Toolkit Right Image, name: toolkit_right_img, widget: image}
+          - {label: Try Free Button, name: try_free_btn, widget: string}
+          - {label: Try Trial Button, name: free_trial_btn, widget: string}
+          - {label: Contact Us Button, name: contact_us_btn, widget: string}
+          - {label: Start Free Trial Button, name: start_free_trial_btn, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/pricing.md"
+        label: "Pricing Page"
+        name: "pricing-page"
+        fields:
+          - {label: Header Title 1, name: header_title_1, widget: string}
+          - {label: Header Title 2, name: header_title_2, widget: string}
+          - {label: Header Desc 1, name: header_desc_1, widget: string}
+          - {label: Header Desc 2, name: header_desc_2, widget: string}
+          - {label: Faq, name: faq, widget: string}
+          - {label: Faq Title, name: faq_title, widget: string}
+          - {label: Faq Desc, name: faq_desc, widget: string}
+          - {label: Faq Title 1, name: faq_title_1, widget: string}
+          - {label: Faq Desc 1, name: faq_desc_1, widget: string}
+          - {label: Faq Title 2, name: faq_title_2, widget: string}
+          - {label: Faq Desc 2, name: faq_desc_2, widget: string}
+          - {label: Faq Title 3, name: faq_title_3, widget: string}
+          - {label: Faq Desc 3, name: faq_desc_3, widget: string}
+          - {label: Faq Title 4, name: faq_title_4, widget: string}
+          - {label: Faq Desc 4, name: faq_desc_4, widget: string}
+          - {label: Faq Title 5, name: faq_title_5, widget: string}
+          - {label: Faq Desc 5, name: faq_desc_5, widget: string}
+          - {label: Faq Title 6, name: faq_title_6, widget: string}
+          - {label: Faq Desc 6, name: faq_desc_6, widget: string}
+          - {label: Testimonials Title, name: testimonials_title, widget: string}
+          - {label: Testimonials Name, name: testimonials_name, widget: string}
+          - {label: Testimonials Title 1, name: testimonials_title_1, widget: string}
+          - {label: Testimonials Name 1, name: testimonials_name_1, widget: string}
+          - {label: Annual, name: annual, widget: string}
+          - {label: Monthly, name: monthly, widget: string}
+          - {label: Try Free Button, name: try_for_free_btn, widget: string}
+          - {label: Contact Us Button, name: contact_us_btn, widget: string}
+          - {label: Testimonials 1 Image, name: testimonials_image_1, widget: image}
+          - {label: Testimonials 2 Image, name: testimonials_image_2, widget: image}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      - file: "content/pages/features.md"
+        label: "Features Page"
+        name: "features-page"
+        fields:
+          - {label: Header Title, name: header_title, widget: string}
+          - {label: Header Title Desc, name: header_title_desc, widget: string}
+          - {label: What's Included Title, name: what_included_title, widget: string}
+          - {label: Featured Image, name: featuredImage, widget: string}
+          - {label: Plan Title 3 , name: plan3_title, widget: string}
+          - {label: Plan Title 2 , name: plan2_title, widget: string}
+          - {label: Already Using Profit, name: already_using_profit, widget: string}
+          - {label: Sign In, name: sign_in, widget: string}
+          - {label: Communication Title 1, name: communication_title_1, widget: string}
+          - {label: Communication Title 2, name: communication_title_2, widget: string}
+          - {label: Communication Title Desc 1, name: communication_title_desc_1, widget: string}
+          - {label: Communication Title 1 1, name: communication_title_1_1, widget: string}
+          - {label: Communication Title Desc 1 1, name: communication_title_desc_1_1, widget: string}
+          - {label: Communication Title 1 2, name: communication_title_1_1, widget: string}
+          - {label: Communication Title Desc 1 2, name: communication_title_desc_1_2, widget: string}
+          - {label: Communication Title 1 3, name: communication_title_1_3, widget: string}
+          - {label: Communication Title Desc 1 3, name: communication_title_desc_1_3, widget: string}
+          - {label: Communication Title 1 4, name: communication_title_1_4, widget: string}
+          - {label: Communication Title Desc 1 4, name: communication_title_desc_1_4, widget: string}
+          - {label: Unified, name: unified, widget: string}
+          - {label: Microservices Title 1, name: microservices_title_1, widget: string}
+          - {label: Microservices Title 2, name: microservices_title_2, widget: string}
+          - {label: Microservices Title Desc, name: microservices_title_desc, widget: string}
+          - {label: About Title 1, name: about_title_1, widget: string}
+          - {label: About Title Desc 1, name: about_title_desc_1, widget: string}
+          - {label: About Title 2, name: about_title_2, widget: string}
+          - {label: About Title Desc 2, name: about_title_desc_2, widget: string}
+          - {label: About Title 3, name: about_title_3, widget: string}
+          - {label: About Title Desc 3, name: about_title_desc_3, widget: string}
+          - {label: About Title 4, name: about_title_4, widget: string}
+          - {label: About Title Desc 4, name: about_title_desc_4, widget: string}
+          - {label: Condition, name: condition, widget: string}
+          - {label: Testimonials Desc, name: testimonials_desc, widget: string}
+          - {label: Testimonials Name, name: testimonials_name, widget: string}
+          - {label: Case Studies, name: case_studies, widget: string}
+          - {label: Case Studies Title, name: case_studies_title, widget: string}
+          - {label: Case Studies Desc, name: case_studies_desc, widget: string}
+          - {label: Case Studies Desc 2, name: case_studies_desc_2, widget: string}
+          - {label: Case Studies Desc 3, name: case_studies_desc_3, widget: string}
+          - {label: Case Studies Desc 4, name: case_studies_desc_4, widget: string}
+          - {label: Case Studies Desc 5, name: case_studies_desc_5, widget: string}
+          - {label: Case Studies Desc 6, name: case_studies_desc_6, widget: string}
+          - {label: Case Studies Desc 7, name: case_studies_desc_7, widget: string}
+          - {label: Coming Soon, name: coming_soon, widget: string}
+          - {label: Platforms Title, name: platforms_title, widget: string}
+          - {label: Platforms Desc, name: platforms_desc, widget: string}
+          - {label: Platforms Title 1, name: platforms_title_1, widget: string}
+          - {label: Platforms Desc 1, name: platforms_desc_1, widget: string}
+          - {label: Platforms Title 2, name: platforms_title_2, widget: string}
+          - {label: Platforms Desc 2, name: platforms_desc_2, widget: string}
+          - {label: Platforms Title 3, name: platforms_title_3, widget: string}
+          - {label: Platforms Desc 3, name: platforms_desc_3, widget: string}
+          - {label: Demo Title, name: demo_title, widget: string}
+          - {label: Demo Desc, name: demo_desc, widget: string}
+          - {label: Request Demo Button, name: request_a_demo_btn, widget: string}
+          - {label: Get Started Button, name: get_started_btn, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+
+      - file: "content/pages/privacy.md"
+        label: "Privacy Page"
+        name: "privacy-page"
+        fields:
+                - {label: Title Name, name: name, widget: string}
+                - {label: Update Date, name: update_date, widget: string}
+                - {label: Tag 1, name: p_tag_1, widget: string}
+                - {label: Tag 2, name: p_tag_2, widget: string}
+                - {label: Title 1, name: p_title_1, widget: string}
+                - {label: Tag 3, name: p_tag_3, widget: string}
+                - {label: Tag 4, name: p_tag_4, widget: string}
+                - {label: Tag 5, name: p_tag_5, widget: string}
+                - {label: Tag 6, name: p_tag_6, widget: string}
+                - {label: Tag 7, name: p_tag_7, widget: string}
+                - {label: Tag 8, name: p_tag_8, widget: string}
+                - {label: Tag 9, name: p_tag_9, widget: string}
+                - {label: Tag 10, name: p_tag_10, widget: string}
+                - {label: Tag 11, name: p_tag_11, widget: string}
+                - {label: Tag 12, name: p_tag_12, widget: string}
+                - {label: Tag 13, name: p_tag_13, widget: string}
+                - {label: Tag 14, name: p_tag_14, widget: string}
+                - {label: Tag 15, name: p_tag_15, widget: string}
+                - {label: Tag 16, name: p_tag_16, widget: string}
+                - {label: Title 2, name: p_title_2, widget: string}
+                - {label: Tag 17, name: p_tag_17, widget: string}
+                - {label: Title 3, name: p_title_3, widget: string}
+                - {label: Tag 18, name: p_tag_18, widget: string}
+                - {label: Title 4, name: p_title_4, widget: string}
+                - {label: Tag 19, name: p_tag_19, widget: string}
+                - {label: Title 5, name: p_title_5, widget: string}
+                - {label: Tag 20, name: p_tag_20, widget: string}
+                - {label: Title 6, name: p_title_6, widget: string}
+                - {label: Tag 21, name: p_tag_21, widget: string}
+                - {label: Title 7, name: p_title_7, widget: string}
+                - {label: Tag 22, name: p_tag_22, widget: string}
+                - {label: Title 8, name: p_title_8, widget: string}
+                - {label: Tag 23, name: p_tag_23, widget: string}
+                - {label: Title 9, name: p_title_9, widget: string}
+                - {label: Tag 24, name: p_tag_24, widget: string}
+                - {label: Tag 25, name: p_tag_25, widget: string}
+                - {label: Tag 26, name: p_tag_26, widget: string}
+                - {label: Question, name: question, widget: string}
+                - {label: Suggestions, name: suggestions, widget: string}
+                - {label: Email Us, name: email_us, widget: string}
+                - {label: Email, name: email, widget: string}
+                - label: "Meta"
+                  required: false
+                  name: "meta"
+                  widget: "object"
+                  fields:
+                    - {label: Title, name: title, widget: string, required: false}
+                    - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+                    - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+                    - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+
+      - file: "content/pages/terms.md"
+        label: "Terms Of Service Page"
+        name: "terms-page"
+        fields:
+          - {label: Title Name, name: title, widget: string}
+          - {label: Update Date, name: update_date, widget: string}
+          - {label: Label 1, name: label_1, widget: string}
+          - {label: Tag 1, name: p_tag_1, widget: string}
+          - {label: Tag 2, name: p_tag_2, widget: string}
+          - {label: Tag 3, name: p_tag_3, widget: string}
+          - {label: Tag 4, name: p_tag_4, widget: string}
+          - {label: Tag 5, name: p_tag_5, widget: string}
+          - {label: Section 1, name: section_1, widget: string}
+          - {label: Tag 6, name: p_tag_6, widget: string}
+          - {label: Tag 7, name: p_tag_7, widget: string}
+          - {label: Tag 8, name: p_tag_8, widget: string}
+          - {label: Section 2, name: section_2, widget: string}
+          - {label: Tag 9, name: p_tag_9, widget: string}
+          - {label: Tag 10, name: p_tag_10, widget: string}
+          - {label: Tag 11, name: p_tag_11, widget: string}
+          - {label: Section 3, name: section_3, widget: string}
+          - {label: Tag 12, name: p_tag_12, widget: string}
+          - {label: Tag 13, name: p_tag_13, widget: string}
+          - {label: Section 4, name: section_4, widget: string}
+          - {label: Tag 14, name: p_tag_14, widget: string}
+          - {label: Tag 15, name: p_tag_15, widget: string}
+          - {label: Tag 16, name: p_tag_16, widget: string}
+          - {label: Section 5, name: section_5, widget: string}
+          - {label: Tag 17, name: p_tag_17, widget: string}
+          - {label: Tag 18, name: p_tag_18, widget: string}
+          - {label: Tag 19, name: p_tag_19, widget: string}
+          - {label: Tag 20, name: p_tag_20, widget: string}
+          - {label: Section 6, name: section_6, widget: string}
+          - {label: Tag 21, name: p_tag_21, widget: string}
+          - {label: Tag 22, name: p_tag_22, widget: string}
+          - {label: Tag 23, name: p_tag_23, widget: string}
+          - {label: Section 7, name: section_7, widget: string}
+          - {label: Tag 24, name: p_tag_24, widget: string}
+          - {label: Tag 25, name: p_tag_25, widget: string}
+          - {label: Tag 26, name: p_tag_26, widget: string}
+          - {label: Tag 27, name: p_tag_27, widget: string}
+          - {label: Section 8, name: section_8, widget: string}
+          - {label: Tag 28, name: p_tag_28, widget: string}
+          - {label: Tag 29, name: p_tag_29, widget: string}
+          - {label: Section 9, name: section_9, widget: string}
+          - {label: Tag 30, name: p_tag_30, widget: string}
+          - {label: Tag 31, name: p_tag_31, widget: string}
+          - {label: Section 10, name: section_10, widget: string}
+          - {label: Tag 32, name: p_tag_32, widget: string}
+          - {label: Section 11, name: section_11, widget: string}
+          - {label: Tag 33, name: p_tag_33, widget: string}
+          - {label: Tag 34, name: p_tag_34, widget: string}
+          - {label: Section 12, name: section_12, widget: string}
+          - {label: Tag 35, name: p_tag_35, widget: string}
+          - {label: Section 13, name: section_13, widget: string}
+          - {label: Tag 36, name: p_tag_36, widget: string}
+          - {label: Tag 37, name: p_tag_37, widget: string}
+          - {label: Tag 38, name: p_tag_38, widget: string}
+          - {label: Tag 39, name: p_tag_39, widget: string}
+          - {label: Tag 40, name: p_tag_40, widget: string}
+          - {label: Section 14, name: section_14, widget: string}
+          - {label: Tag 41, name: p_tag_41, widget: string}
+          - {label: Section 15, name: section_15, widget: string}
+          - {label: Tag 42, name: p_tag_42, widget: string}
+          - {label: Section 16, name: section_16, widget: string}
+          - {label: Tag 43, name: p_tag_43, widget: string}
+          - {label: Tag 44, name: p_tag_44, widget: string}
+          - {label: Tag 45, name: p_tag_45, widget: string}
+          - {label: Section 17, name: section_17, widget: string}
+          - {label: Tag 46, name: p_tag_46, widget: string}
+          - {label: Tag 47, name: p_tag_47, widget: string}
+          - {label: Tag 48, name: p_tag_48, widget: string}
+          - {label: Section 18, name: section_18, widget: string}
+          - {label: Tag 49, name: p_tag_49, widget: string}
+          - {label: Section 19, name: section_19, widget: string}
+          - {label: Tag 50, name: p_tag_50, widget: string}
+          - {label: Section 20, name: section_20, widget: string}
+          - {label: Tag 51, name: p_tag_51, widget: string}
+          - {label: Question, name: question, widget: string}
+          - {label: Suggestions, name: suggestions, widget: string}
+          - {label: Email Us, name: email_us, widget: string}
+          - {label: Email, name: email, widget: string}
+          - label: "Meta"
+            required: false
+            name: "meta"
+            widget: "object"
+            fields:
+              - {label: Title, name: title, widget: string, required: false}
+              - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+              - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+              - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+
+
+      - file: "content/pages/testimonials.md"
+        label: "Testimonials Page"
+        name: "testimonials-page"
+        fields:
+                - {label: Header Desc, name: header_desc, widget: string}
+                - {label: Content Tab3 Value, name: content_tab3_value, widget: string}
+                - {label: Content Tab3 Title, name: content_tab3_title, widget: string}
+                - {label: Content Tab2 Value, name: content_tab2_value, widget: string}
+                - {label: Content Tab2 Title, name: content_tab2_title, widget: string}
+                - {label: Content Tab1 Value, name: content_tab1_value, widget: string}
+                - {label: Content Tab1 Title, name: content_tab1_title, widget: string}
+                - {label: Content Title 2, name: content_title_2, widget: string}
+                - {label: Content Title 1, name: content_title_1, widget: string}
+                - {label: Content Desc, name: content_desc, widget: string}
+                - {label: Interest Desc, name: interest_desc, widget: string}
+                - {label: Interest Title, name: interest_title, widget: string}
+                - {label: Header Title, name: header_title, widget: string}
+                - {label: Email Button, name: btn_email, widget: string}
+                - {label: Header 8 Image, name: header_img8, widget: image}
+                - {label: Header 7 Image, name: header_img7, widget: image}
+                - {label: Header 6 Image, name: header_img6, widget: image}
+                - {label: Header 5 Image, name: header_img5, widget: image}
+                - {label: Header 4 Image, name: header_img4, widget: image}
+                - {label: Header 3 Image, name: header_img3, widget: image}
+                - {label: Header 2 Image, name: header_img2, widget: image}
+                - {label: Header 1 Image, name: header_img1, widget: image}
+                - {label: Slider 2 Image, name: slider2, widget: image}
+                - {label: Slider 3 Image, name: slider3, widget: image}
+                - {label: Slider 1 Image, name: slider1, widget: image}
+
+                - {label: Featured Image, name: featuredImage, widget: string}
+                - {label: Subtitle, name: subtitle, widget: string}
+                - {label: Body, name: body, widget: string}
+                - label: "Meta"
+                  required: false
+                  name: "meta"
+                  widget: "object"
+                  fields:
+                    - {label: Title, name: title, widget: string, required: false}
+                    - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+                    - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+                    - {label: Noindex, name: noindex, widget: boolean, required: false}
+
+      
+      
+
+
