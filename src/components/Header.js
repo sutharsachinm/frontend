@@ -57,7 +57,8 @@ class Header extends Component {
            this.props.changeRole(email);
            this.props.changeRegisterType(1);
            this.props.ChangePlan(plan);
-            history.replace('/product-tours/signup?email='+email);
+            // history.go();
+            window.location.href='/product-tours/'+email+'/1'
 
          })
          .catch(error =>{
@@ -167,7 +168,7 @@ class Header extends Component {
                 <section className="container">
 
               <a className="navbar-brand" href="/">
-                <img src="production/static/img/logo.png" className="navbar-brand-img" alt="..." />
+                <img src="/production/static/img/logo.png" className="navbar-brand-img" alt="..." />
                 <span className="navbar-title">
                     Pro 
                 </span>

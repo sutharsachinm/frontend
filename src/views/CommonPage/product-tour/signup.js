@@ -82,10 +82,11 @@ class Home extends Component {
 
     componentDidMount(){
         console.log(this.props);
-        if(this.props.registerType!==1 && this.props.planId=="")
-        {
-           window.location.href="/";
-        }
+        // if(this.props.registerType!==1 && this.props.planId=="")
+        // {
+        //    window.location.href="/";
+        // }
+        
 
         $("#myFooter").remove();
        console.log('dsadada',this.props.planId);

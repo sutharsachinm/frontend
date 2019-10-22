@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Helmet from 'react-helmet'
-
-
-
 import history from './history';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth.js';
@@ -36,6 +33,14 @@ import './template.css'
 import data from './data.json'
 import { slugify } from './util/url'
 import { documentHasTerm, getCollectionTerms } from './util/collection'
+// /Start an Auth0 Session
+const auth = new Auth();
+
+const handleAuthentication = (nextState, replace) => {
+	if (/access_token|id_token|error/.test(nextState.location.hash)) {
+	  auth.handleAuthentication(nextState);
+	}
+  };
 
 const RouteWithMeta = ({ component: Component, ...props }) => (
   <Route
@@ -80,7 +85,7 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-      <Router>
+      <Router history={history}>
         <div className='React-Wrap'>
           
          
@@ -90,12 +95,14 @@ class App extends Component {
             titleTemplate={`${siteTitle} | %s`}
           />
        
-          <Header />
+          <Header props={this.props} auth={auth} />
 
           <Switch>
             <RouteWithMeta
               path='/'
+              auth={auth}
               exact
+              props={this.props}
               component={Home}
               description={siteDescription}
               fields={this.getDocument('pages', 'home')}
@@ -103,6 +110,8 @@ class App extends Component {
             <RouteWithMeta
               path='/pricing/'
               exact
+              props={this.props}
+              auth={auth}
               component={Pricing}
               fields={this.getDocument('pages', 'pricing')}
               siteTitle={siteTitle}
@@ -110,6 +119,8 @@ class App extends Component {
             <RouteWithMeta
               path='/features/'
               exact
+              auth={auth}
+              props={this.props}
               component={Features}
               fields={this.getDocument('pages', 'features')}
               siteTitle={siteTitle}
@@ -117,6 +128,8 @@ class App extends Component {
             <RouteWithMeta
               path='/terms-of-service/'
               exact
+              props={this.props}
+              auth={auth}
               component={Terms}
               fields={this.getDocument('pages', 'terms')}
               siteTitle={siteTitle}
@@ -124,6 +137,8 @@ class App extends Component {
             <RouteWithMeta
               path='/support/'
               exact
+              props={this.props}
+              auth={auth}
               component={Support}
               fields={this.getDocument('pages', 'Support')}
               siteTitle={siteTitle}
@@ -131,14 +146,17 @@ class App extends Component {
             <RouteWithMeta
               path='/testimonials/'
               exact
+              props={this.props}
+              auth={auth}
               component={Testimonials}
               fields={this.getDocument('pages', 'testimonials')}
               siteTitle={siteTitle}
             />
             
             <RouteWithMeta
-              path='/freeTrail/'
-              exact
+              path="/product-tours/:title/:plan"
+              props={this.props}
+              auth={auth}
               component={FreeTrail}
               fields={this.getDocument('pages', 'FreeTrail')}
               siteTitle={siteTitle}
@@ -146,6 +164,8 @@ class App extends Component {
             <RouteWithMeta
               path='/faq/'
               exact
+              props={this.props}
+              auth={auth}
               component={Faq}
               fields={this.getDocument('pages', 'Faq')}
               siteTitle={siteTitle}
@@ -153,6 +173,8 @@ class App extends Component {
             <RouteWithMeta
               path='/privacy/'
               exact
+              props={this.props}
+              auth={auth}
               component={Privacy}
               fields={this.getDocument('pages', 'privacy')}
               siteTitle={siteTitle}
@@ -160,6 +182,8 @@ class App extends Component {
             <RouteWithMeta
               path='/refund/'
               exact
+              props={this.props}
+              auth={auth}
               component={Refund}
               fields={this.getDocument('pages', 'Refund')}
               siteTitle={siteTitle}
@@ -167,8 +191,12 @@ class App extends Component {
 
 
             
-
-            <Route render={() => <NoMatch siteUrl={siteUrl} />} />
+              {/*Callback url*/}
+              <Route path="/callback" render={(props) => {
+                          handleAuthentication(props);
+                          return <Callback {...props} />;
+						}}/>
+            <Route render={() => <NoMatch auth={auth} siteUrl={siteUrl} />} />
           </Switch>
           <Footer />
         </div>

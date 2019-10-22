@@ -190,11 +190,11 @@
       "body": ""
     },
     {
-      "content": "",
+      "content": "\r\n",
       "isEmpty": false,
       "excerpt": "",
       "name": "privacy",
-      "update_date": "Updated 30/08/2019",
+      "update_date": "Updated 30/08/2018",
       "p_tag_1": "Profit Pro takes your privacy seriously. We will not sell, lease, or exchange your personal data to, or otherwise share your personal data with, third parties in ways other than described in this Privacy Policy.'",
       "p_tag_2": "By using Profit Pro including services available at the ProfitPro.com domains, you are using a service provided by Profit Pro. (the “Service”) and you agree to be bound by the Terms of Service and this Privacy Policy. Some capitalized terms used in this Privacy Policy and not otherwise defined may be defined in the Terms of Service. This Privacy Policy only addresses activities from our servers.",
       "p_title_1": "Consent and Information Collection and Use",
@@ -234,13 +234,13 @@
       "suggestions": "If you have any questions or suggestions regarding our Privacy Policy.",
       "email_us": "EMAIL US",
       "email": "tech@profitpro.io",
-      "body": ""
+      "body": "\r\n"
     },
     {
-      "content": "",
+      "content": "\r\n",
       "isEmpty": false,
       "excerpt": "",
-      "title": "Terms of Service",
+      "title": "Terms of Servicesssss",
       "update_date": "Updated 30/08/2019",
       "label_1": "OVERVIEW",
       "p_tag_1": "This website is operated by Profit Pro. Throughout the site, the terms “we”, “us” and “our” refer to Profit Pro. Profit Pro offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.",
@@ -319,7 +319,7 @@
       "email_us": "EMAIL US",
       "email": "tech@profitpro.io",
       "name": "terms",
-      "body": ""
+      "body": "\r\n"
     },
     {
       "content": "",
@@ -418,8 +418,8 @@
   ],
   "settings": [
     {
-      "siteTitle": "Netlify CMS + React Starter",
-      "siteUrl": "https://netlify-cms-react-starter.netlify.com",
+      "siteTitle": "Profit Pro",
+      "siteUrl": "https://profitpro.io/",
       "siteDescription": "A starter project for creating lightning-fast, offline-first websites with Netlify CMS and React.",
       "socialMediaCard": {
         "image": "/images/uploads/card-og.png",

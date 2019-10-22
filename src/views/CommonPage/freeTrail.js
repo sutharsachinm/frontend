@@ -40,23 +40,28 @@ class Home extends Component {
       };
     componentWillMount()
     {
-        if(this.getHeader()===false)
-        {
-          window.location.href="/404";
-        }
-        else
-        {
+      console.log(this.props)
+        // if(this.getHeader()===false)
+        // {
+        //   window.location.href="/404";
+        // }
+        // else
+        // {
+           
+           this.props.changeRegisterType(1)
+           this.props.changeRole(this.props.match.params.title)
+           this.props.ChangePlan(this.props.match.params.plan)
            this.setState({currentPage:this.getHeader()})
-        }
+        // }
+        
   
     }
     componentWillReceiveProps(nextProps){
       console.log(nextProps)
-
     }
 
     pageSwitcher(){
-      console.log(this.state.currentPage)
+      console.log('current page',this.state.currentPage)
       switch(this.props.registerType){
         case 1:
           return ( <SignUp auth={this.props.auth}  />)
@@ -122,6 +127,12 @@ const mapDispatchToProps = (dispatch) => {
                     payload: role
                 }
             );
+        },
+        ChangePlan: planId => {
+          dispatch({
+            type: "ChangePlan",
+            payload: planId
+          });
         },
          changeRegisterType: (registerType) => {
             dispatch(
