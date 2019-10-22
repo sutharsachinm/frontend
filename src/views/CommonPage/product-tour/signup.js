@@ -34,6 +34,7 @@ class Home extends Component {
             signRole:"",
             signheard:"",
             signCompLoc:"",
+            signupPage:null,
             planId:"",
             plan:[
                 {
@@ -81,7 +82,8 @@ class Home extends Component {
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
     componentDidMount(){
-        console.log(this.props);
+        console.log("props signup",this.props.props.fields);
+        this.setState({signupPage:this.props.props.fields})
         // if(this.props.registerType!==1 && this.props.planId=="")
         // {
         //    window.location.href="/";
@@ -265,7 +267,7 @@ class Home extends Component {
     render() {
        
 
-            const {planId,signCompLoc,plan,signFullName,signCompSize,signheard,signRole,signPswd,signPhone,signEmail,signCompany } = this.state;
+            const {planId,signupPage,signCompLoc,plan,signFullName,signCompSize,signheard,signRole,signPswd,signPhone,signEmail,signCompany } = this.state;
             
             return (
             
@@ -279,7 +281,7 @@ class Home extends Component {
                                 <div className="trials-container">
 
                                     <div>
-                                        <div className="trial-text" > Your free trial</div>
+                                        <div className="trial-text" > {signupPage!=null && signupPage.ac_plan_title}</div>
                                         <div className="sp_15"></div>
                                         {planId!=="" && 
                                         <div className="teams__trial">
@@ -291,7 +293,7 @@ class Home extends Component {
                                                 <div className="sp__2"></div>
                                                 <div className="product-box-products">
                                                     <div className="sp__2"></div>
-                                                    <div>Plan includes:</div>
+                                                    <div>{signupPage!=null && signupPage.ac_plan_desc}:</div>
                                                     <div className="sp__1"></div>
                                                     {this.renderPrice(plan[planId].data)}
                                                
@@ -317,9 +319,9 @@ class Home extends Component {
                             <div className="  tour-left col-12 col-md-5 col-lg-7 order-md-1 mb-auto mb-md-0 pb-8 mg-11">
                                 
                             
-                                <h1 className="mb-0 font-weight-bold text-center"> Sign Up </h1>
+                                <h1 className="mb-0 font-weight-bold text-center">{signupPage!=null && signupPage.ac_header_title} </h1>
 
-                                <p className="mb-6 text-center text-muted"> Simplify your workflow in minutes. </p>
+                                <p className="mb-6 text-center text-muted"> {signupPage!=null && signupPage.ac_header_desc} </p>
                                 
                                
                                 <div className="sp__1"></div>

@@ -224,7 +224,7 @@ class Header extends Component {
                     
                       <input type="email" id="emailAddress2"  name="emailAddress2" value={emailAddress2} onChange={this.handleChange.bind(this)}  className="form-control text-size pl-2 border-right-0" placeholder="Email Address"  />
                       <a href="javascript:void(0);" onClick={this.checkEmail.bind(this,'emailAddress2',0)} className="btn btn-size btn-primary-soft">
-                        Get started
+                        {headerPage.get_started_btn}
                       </a>
                     </div>
                 
@@ -232,7 +232,7 @@ class Header extends Component {
                 <ul className="navbar-nav ml-auto d-lg login-style  ">
                   <li className="nav-item hidden-sm hidden-md hidden-xs">
                     <a className="nav-link" href="javascript:void(0);" onClick={this.login.bind(this)}>
-                    Sign In
+                    {headerPage.p_title_5}
                     </a>
                   </li>
                 </ul>
@@ -248,9 +248,9 @@ class Header extends Component {
                   
                   <div className="container">
                   <a className="navbar-brand" href="/">
-                    <img src="/production/static/img/logo.png" className="navbar-brand-img" alt="..." />
+                    <img src={headerPage.logo_img} className="navbar-brand-img" alt="..." />
                     <span className="navbar-title">
-                        Pro 
+                        {headerPage.logo_name} 
                     </span>
                   </a>
                    
@@ -268,16 +268,16 @@ class Header extends Component {
                     <ul className="navbar-nav navbar-nav1 ml-auto">
                       <li className="nav-item">
                         <a className={"nav-link "+ (registerType ==1 ? 'isActive' :'' ) } id="signu-1"  
-                        href='javascript:void(0);' onClick={this.handleRoute.bind(this,1)}  > 1. Create account </a>
+                        href='javascript:void(0);' onClick={this.handleRoute.bind(this,1)}  > {headerPage.p_title_11}  </a>
                       </li>
                       <li className="nav-item ">
                         <a className={"nav-link "+ (registerType ==2 ? 'isActive' :'' ) } onClick={this.handleRoute.bind(this,2)}  id="plan-1"    href='javascript:void(0);' >
-                        2. Confirm plan
+                        {headerPage.p_title_12} 
                         </a>
                      </li>
                       <li className="nav-item ">
                         <a  className={"nav-link "+ (registerType ==3 ? 'isActive' :'' ) } id="confirm-1"    href='javascript:void(0);'>
-                          3. Start trial
+                          {headerPage.p_title_13} 
                         </a>
                       </li>
                       

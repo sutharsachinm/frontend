@@ -53,7 +53,7 @@ CMS.registerPreviewTemplate('support-page', ({ entry }) => (
 CMS.registerPreviewTemplate('testimonials-page', ({ entry }) => (
   <Testimonials fields={entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('freeTrail-page', ({ entry }) => (
+CMS.registerPreviewTemplate('productTours-page', ({ entry }) => (
   <FreeTrail fields={entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('faq-page', ({ entry }) => (

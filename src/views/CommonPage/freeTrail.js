@@ -64,20 +64,20 @@ class Home extends Component {
       console.log('current page',this.state.currentPage)
       switch(this.props.registerType){
         case 1:
-          return ( <SignUp auth={this.props.auth}  />)
+          return ( <SignUp auth={this.props.auth}  props={this.props} />)
           break;
   
         case 2:
-          return ( <Plan auth={this.props.auth}  />)
+          return ( <Plan auth={this.props.auth}   props={this.props} />)
           break;
   
         case 3:
-          return ( <Trial  auth={this.props.auth} />)
+          return ( <Trial  auth={this.props.auth}  props={this.props} />)
           break;
   
        
         default:
-          return ( <SignUp   />)
+          return ( <SignUp  auth={this.props.auth}  props={this.props} />)
           break;
       }
     }

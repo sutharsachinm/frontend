@@ -393,6 +393,9 @@ collections: # A list of collections the CMS should be able to edit
                 - {label: Title 8, name: p_title_8, widget: string}
                 - {label: Title 9, name: p_title_9, widget: string}
                 - {label: Title 10, name: p_title_10, widget: string}
+                - {label: Title 11, name: p_title_11, widget: string}
+                - {label: Title 12, name: p_title_12, widget: string}
+                - {label: Title 13, name: p_title_13, widget: string}
                 - {label: Footer One Liner, name: footer_one_liner, widget: string}
                 - {label: Logo Image, name: logo_img, widget: image}
                 - {label: Facebook Image, name: facebook_img, widget: image}
@@ -407,6 +410,33 @@ collections: # A list of collections the CMS should be able to edit
                     - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
                     - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
                     - {label: Noindex, name: noindex, widget: boolean, required: false}  
+      - file: "content/pages/productTours.md"
+              label: "product Tours Page"
+              name: "productTours-page"
+              fields:
+                      - {label: create account Header Title, name: ac_header_title, widget: string}
+                      - {label: create account Header Desc, name: ac_header_desc, widget: string}
+                      - {label: create Plan Title, name: ac_plan_title, widget: string}
+                      - {label: create Plan Desc, name: ac_plan_desc, widget: string}
+                      - {label: confirm Plan Title, name: cp_header_title, widget: string}
+                      - {label: confirm Plan Desc 1, name: cp_plan_desc_1, widget: string}
+                      - {label: confirm Plan Desc 2, name: cp_plan_desc_2, widget: string}
+                      - {label: Start Trial Header Title, name: st_header_title, widget: string}
+                      - {label: Start Trial Plan Desc 1, name: st_plan_desc_1, widget: string}
+                      - {label: Credit Card, name: credit_card, widget: string}
+                      - {label: Trial Day, name: trial_day, widget: string}
+                      - {label: Free Trial, name: free_trial, widget: string}
+                      
+                      
+                      - label: "Meta"
+                        required: false
+                        name: "meta"
+                        widget: "object"
+                        fields:
+                          - {label: Title, name: title, widget: string, required: false}
+                          - {label: Description, name: description, widget: text, required: false, pattern: [".{,300}", "Must not exceed 300 characters"]}
+                          - {label: Canonical Link, name: canonicalLink, widget: string, required: false}
+                          - {label: Noindex, name: noindex, widget: boolean, required: false}  
 
 
       - file: "content/pages/testimonials.md"

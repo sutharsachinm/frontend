@@ -13,6 +13,7 @@ class Plan extends Component {
         this.state = {
             name:"SignUp",
             planId:"",
+            planPage:null,
             plan:[
                 {
                 "key":"ESSENTIAL",
@@ -61,8 +62,9 @@ class Plan extends Component {
         {
             window.location.href="/";
         }
-        console.log(this.props);
-        this.setState({planId:this.props.planId})
+         console.log("props plan",this.props.props.fields);
+        
+        this.setState({planId:this.props.planId,planPage:this.props.props.fields})
     }
 
     handleNext(){
@@ -116,7 +118,7 @@ class Plan extends Component {
 
     render() {
 
-        const {planId,plan} = this.state;
+        const {planId,plan,planPage} = this.state;
         console.log(plan)
         console.log('sadad',planId)
 
@@ -132,7 +134,7 @@ class Plan extends Component {
                                 <div className=" tour-left col-12 col-md-5 col-lg-7 order-md-1 mb-auto mb-md-0 pb-8 mg-11">
                                     <div className="">
                                   
-                                        <h1 className="mb-0 font-weight-bold text-center"> Here's your trial plan </h1>
+                                        <h1 className="mb-0 font-weight-bold text-center">  {planPage!=null && planPage.cp_header_title} </h1>
                                         <div className="sp__3"></div>
                                         <div className="centers-horizontally">
                                         {planId!=="" && 
@@ -141,9 +143,9 @@ class Plan extends Component {
                                                 {plan[planId].key}
                                                 </div>
                                                 <div className="sp__2"></div>
-                                                <div>Plan includes:</div>
+                                                <div>{planPage!=null && planPage.cp_plan_desc_1}:</div>
                                                 <div className="sp__3"></div>
-                                                <div className="plan-title-text">Top Features: </div>
+                                                <div className="plan-title-text">{planPage!=null && planPage.cp_plan_desc_2}: </div>
                                                 <div className="sp__15"></div>
                                                 <div className="layout-box o-flexes has-columns">
                                                     {this.renderPrice(plan[planId].data)}

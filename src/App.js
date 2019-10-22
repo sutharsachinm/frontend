@@ -158,7 +158,7 @@ class App extends Component {
               props={this.props}
               auth={auth}
               component={FreeTrail}
-              fields={this.getDocument('pages', 'FreeTrail')}
+              fields={this.getDocument('pages', 'productTours')}
               siteTitle={siteTitle}
             />
             <RouteWithMeta

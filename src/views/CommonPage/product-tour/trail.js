@@ -14,6 +14,7 @@ class Confirm extends Component {
         this.state = {
             name:"SignUp",
             planId:"",
+            freeTrail:null,
             plan:[
                 {
                 "key":"ESSENTIAL",
@@ -62,7 +63,9 @@ class Confirm extends Component {
         {
            window.location.href="/";
         }
-        this.setState({planId:this.props.planId})
+        console.log("props freeTrail",this.props.props.fields);
+        this.setState({planId:this.props.planId,freeTrail:this.props.props.fields})
+        
     }
 
     renderPrice(plan){
@@ -141,7 +144,7 @@ class Confirm extends Component {
     render() {
 
         
-        const {planId,plan} = this.state;
+        const {planId,plan,freeTrail} = this.state;
         return (
             
             
@@ -154,7 +157,7 @@ class Confirm extends Component {
                                 <div className="trials-container">
 
                                 <div>
-                                        <div className="trial-text" > Your free trial</div>
+                                        <div className="trial-text" > {freeTrail!=null & freeTrail.st_header_title}</div>
                                         <div className="sp_15"></div>
                                         {planId!=="" && 
                                         <div className="teams__trial">
@@ -166,7 +169,7 @@ class Confirm extends Component {
                                                 <div className="sp__2"></div>
                                                 <div className="product-box-products">
                                                     <div className="sp__2"></div>
-                                                    <div>Plan includes:</div>
+                                                    <div>{freeTrail!=null & freeTrail.st_plan_desc_1}:</div>
                                                     <div className="sp__1"></div>
                                                     {this.renderPrice(plan[planId].data)}
                                                
@@ -192,7 +195,7 @@ class Confirm extends Component {
                             <div className="u__overflow tour-left col-12 col-md-5 col-lg-7 order-md-1 mb-auto mb-md-0 pb-8 mg-11">
                                 
                             
-                                <h1 className="mb-0 font-weight-bold text-center"> Start your free trial </h1>
+                                <h1 className="mb-0 font-weight-bold text-center">{freeTrail!=null & freeTrail.free_trial}  </h1>
 
                                 
                                 <div className="sp__1"></div>
@@ -200,12 +203,12 @@ class Confirm extends Component {
                                 <form className="mb-6">
 
                                 <div className="form-group">
-                                    <label for="card-number"> Credit card informatio </label>
+                                    <label for="card-number"> {freeTrail!=null & freeTrail.credit_card} </label>
                                     <input type="number" name="card-number" className="form-control" id="card-number" placeholder="Card Number" />
                                     <p className="err" id="p_cardNumber" ></p>
                                 </div>
                                 
-                                    <button className="btn btn-block btn-primary" onClick={this.handleClick.bind(this)} type="button"> Start your free 14 day trial </button>
+                                    <button className="btn btn-block btn-primary" onClick={this.handleClick.bind(this)} type="button"> S{freeTrail!=null & freeTrail.trial_day} </button>
 
                                 </form>
 

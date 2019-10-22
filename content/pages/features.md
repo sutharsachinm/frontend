@@ -56,8 +56,8 @@ case_studies_desc_7 : Uses Landkit to plan their priorities for the company quar
 
 coming_soon : COMING SOON.
 
-platforms_title : 'Integrated with your favorite platforms
-platforms_desc : Your data should be connected and portable. Landkit connects with other sources to help you get more done.'
+platforms_title : 'Integrated with your favorite platforms'
+platforms_desc : Your data should be connected and portable. Landkit connects with other sources to help you get more done.
 
 platforms_title_1 : AliExpress
 platforms_desc_1 : Aliexpress Database and Chrome plugin coming soon.
